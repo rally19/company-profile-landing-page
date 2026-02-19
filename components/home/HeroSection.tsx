@@ -3,6 +3,8 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
+import companyData from '@/company.json';
+
 export function HeroSection() {
     return (
         <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
@@ -20,10 +22,10 @@ export function HeroSection() {
                     className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6"
                 >
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-white">
-                        Transparent Data
+                        {companyData.tagline.prefix}
                     </span>
                     <br />
-                    For A Better Future.
+                    {companyData.tagline.suffix}
                 </motion.h1>
 
                 <motion.p
@@ -32,8 +34,7 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto mb-10"
                 >
-                    Access real-time insights into our company's growth, projects, and people.
-                    We believe in openness and accountability.
+                    {companyData.heroDescription}
                 </motion.p>
 
                 <motion.div

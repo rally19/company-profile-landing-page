@@ -5,7 +5,7 @@ export interface CompanyStats {
 }
 
 export interface Employee {
-    id: string;
+    id: string | number;
     name: string;
     email: string;
     position: string;
@@ -15,17 +15,17 @@ export interface Employee {
 }
 
 export interface Department {
-    id: string;
+    id: string | number;
     name: string;
     description: string;
 }
 
 export interface Project {
-    id: string;
+    id: string | number;
     name: string;
     client: string;
-    status: 'ongoing' | 'completed';
-    description: string;
+    status: 'planning' | 'ongoing' | 'completed';
+    description: string; // May be missing in API, handle optional or map
     startDate: string;
     endDate?: string;
     pic: string; // Employee ID or Name

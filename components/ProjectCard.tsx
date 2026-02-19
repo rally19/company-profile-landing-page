@@ -1,6 +1,6 @@
 import { Project } from '@/lib/api/types';
 import { motion } from 'motion/react';
-import { Calendar, User, CheckCircle2, Clock } from 'lucide-react';
+import { Calendar, User, CheckCircle2, Clock, MapPin } from 'lucide-react';
 
 interface ProjectCardProps {
     project: Project;
@@ -9,6 +9,24 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
     const isCompleted = project.status === 'completed';
+    const isPlanning = project.status === 'planning';
+
+    let statusColor = 'bg-blue-500';
+    let statusBadgeClass = 'bg-blue-500/10 text-blue-400 border-blue-500/20';
+    let StatusIcon = Clock;
+    let statusLabel = 'Ongoing';
+
+    if (isCompleted) {
+        statusColor = 'bg-green-500';
+        statusBadgeClass = 'bg-green-500/10 text-green-400 border-green-500/20';
+        StatusIcon = CheckCircle2;
+        statusLabel = 'Completed';
+    } else if (isPlanning) {
+        statusColor = 'bg-amber-500';
+        statusBadgeClass = 'bg-amber-500/10 text-amber-400 border-amber-500/20';
+        StatusIcon = MapPin; // Using MapPin or similar for Planning/Roadmap
+        statusLabel = 'Planning';
+    }
 
     return (
         <motion.div
@@ -17,7 +35,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             transition={{ duration: 0.4, delay: index * 0.05 }}
             className="bg-zinc-900 border border-white/5 rounded-xl overflow-hidden hover:border-blue-500/30 transition-all flex flex-col h-full"
         >
-            <div className={`h-2 w-full ${isCompleted ? 'bg-green-500' : 'bg-blue-500'}`} />
+            <div className={`h-2 w-full ${statusColor}`} />
 
             <div className="p-6 flex-grow flex flex-col">
                 <div className="flex justify-between items-start mb-4">
@@ -25,12 +43,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         <h3 className="text-xl font-bold text-white mb-1">{project.name}</h3>
                         <p className="text-sm text-blue-400 font-medium">{project.client}</p>
                     </div>
-                    <span className={`flex items-center space-x-1 px-2.5 py-1 rounded-full text-xs font-semibold border ${isCompleted
-                            ? 'bg-green-500/10 text-green-400 border-green-500/20'
-                            : 'bg-blue-500/10 text-blue-400 border-blue-500/20'
-                        }`}>
-                        {isCompleted ? <CheckCircle2 size={12} /> : <Clock size={12} />}
-                        <span>{isCompleted ? 'Completed' : 'Ongoing'}</span>
+                    <span className={`flex items-center space-x-1 px-2.5 py-1 rounded-full text-xs font-semibold border ${statusBadgeClass}`}>
+                        <StatusIcon size={12} />
+                        <span>{statusLabel}</span>
                     </span>
                 </div>
 

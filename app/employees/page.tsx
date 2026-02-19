@@ -6,6 +6,8 @@ import { EmployeeCard } from '@/components/EmployeeCard';
 import { motion } from 'motion/react';
 import { Loader2 } from 'lucide-react';
 
+import companyData from '@/company.json';
+
 export default function EmployeesPage() {
     const { data: employees, isLoading, error } = useQuery({
         queryKey: ['employees'],
@@ -22,11 +24,10 @@ export default function EmployeesPage() {
                     className="mb-12 text-center"
                 >
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-                        Meet Our Team
+                        {companyData.employeesPage.title}
                     </h1>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        The talented individuals driving innovation at CorpData.
-                        Browse our list of dedicated professionals across various departments.
+                        {companyData.employeesPage.description}
                     </p>
                 </motion.div>
 

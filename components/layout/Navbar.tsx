@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import companyData from '@/company.json';
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -24,10 +25,10 @@ export function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 group">
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform">
-                            C
+                            {companyData.name[0]}
                         </div>
                         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                            CorpData
+                            {companyData.name}
                         </span>
                     </Link>
 
@@ -60,7 +61,7 @@ export function Navbar() {
                     {/* Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
                         {/* Placeholder for Dashboard Login if needed, or just a generic CTA */}
-                        <Link href="#" className="px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/5">
+                        <Link href="https://wicked-katleen-companyuhuy-cda70a58.koyeb.app/" className="px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/5">
                             Login
                         </Link>
                     </div>

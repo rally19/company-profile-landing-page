@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Github, Twitter, Linkedin } from 'lucide-react';
+import companyData from '@/company.json';
 
 export function Footer() {
     return (
@@ -9,12 +10,12 @@ export function Footer() {
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
-                                C
+                                {companyData.name[0]}
                             </div>
-                            <span className="text-xl font-bold text-white">CorpData</span>
+                            <span className="text-xl font-bold text-white">{companyData.name}</span>
                         </div>
                         <p className="text-gray-400 text-sm">
-                            Empowering transparency and innovation through open data access.
+                            {companyData.footer.description}
                         </p>
                     </div>
 

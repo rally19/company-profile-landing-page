@@ -1,0 +1,36 @@
+{
+    "name": "CorpData",
+    "tagline": {
+        "prefix": "Transparent Data",
+        "suffix": "For A Better Future."
+    },
+    "heroDescription": "Access real-time insights into our company's growth, projects, and people. We believe in openness and accountability.",
+    "about": {
+        "title": "About CorpData",
+        "description1": "CorpData is a leading technology firm dedicated to solving complex problems through innovative software solutions. Founded in 2020, we have grown from a small startup to a global team of passionate experts.",
+        "description2": "Our culture is built on transparency, continuous learning, and a relentless drive for excellence. We open our data to the public because we believe trust is earned through visibility."
+    },
+    "vision": {
+        "title": "Our Vision",
+        "description": "To become the world's most trusted and transparent technology partner, driving global innovation."
+    },
+    "mission": {
+        "title": "Our Mission",
+        "description": "To deliver high-quality, scalable digital products while maintaining an open ecosystem for our employees, clients, and the community."
+    },
+    "employeesPage": {
+        "title": "Meet Our Team",
+        "description": "The talented individuals driving innovation at CorpData. Browse our list of dedicated professionals across various departments."
+    },
+    "projectsPage": {
+        "title": "Our Projects",
+        "description": "Discover the impactful work we deliver for our clients. From ongoing initiatives to successfully completed milestones."
+    },
+    "metadata": {
+        "title": "CorpData - Enterprise Insights",
+        "description": "Transparency and data accessibility for the modern enterprise."
+    },
+    "footer": {
+        "description": "Empowering transparency and innovation through open data access."
+    }
+}

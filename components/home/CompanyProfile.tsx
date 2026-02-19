@@ -2,6 +2,8 @@
 
 import { motion } from 'motion/react';
 
+import companyData from '@/company.json';
+
 export function CompanyProfile() {
     return (
         <section className="py-24 bg-black relative">
@@ -13,14 +15,12 @@ export function CompanyProfile() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl font-bold text-white mb-6">About CorpData</h2>
+                        <h2 className="text-3xl font-bold text-white mb-6">{companyData.about.title}</h2>
                         <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            CorpData is a leading technology firm dedicated to solving complex problems through innovative software solutions.
-                            Founded in 2020, we have grown from a small startup to a global team of passionate experts.
+                            {companyData.about.description1}
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Our culture is built on transparency, continuous learning, and a relentless drive for excellence.
-                            We open our data to the public because we believe trust is earned through visibility.
+                            {companyData.about.description2}
                         </p>
                     </motion.div>
 
@@ -32,15 +32,15 @@ export function CompanyProfile() {
                         className="grid grid-cols-1 gap-8"
                     >
                         <div className="p-8 rounded-2xl bg-zinc-900 border border-white/10 hover:border-blue-500/50 transition-colors">
-                            <h3 className="text-xl font-bold text-blue-400 mb-3">Our Vision</h3>
+                            <h3 className="text-xl font-bold text-blue-400 mb-3">{companyData.vision.title}</h3>
                             <p className="text-gray-400">
-                                To become the world's most trusted and transparent technology partner, driving global innovation.
+                                {companyData.vision.description}
                             </p>
                         </div>
                         <div className="p-8 rounded-2xl bg-zinc-900 border border-white/10 hover:border-purple-500/50 transition-colors">
-                            <h3 className="text-xl font-bold text-purple-400 mb-3">Our Mission</h3>
+                            <h3 className="text-xl font-bold text-purple-400 mb-3">{companyData.mission.title}</h3>
                             <p className="text-gray-400">
-                                To deliver high-quality, scalable digital products while maintaining an open ecosystem for our employees, clients, and the community.
+                                {companyData.mission.description}
                             </p>
                         </div>
                     </motion.div>

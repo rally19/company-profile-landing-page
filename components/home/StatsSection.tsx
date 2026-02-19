@@ -11,7 +11,7 @@ export function StatsSection() {
     });
 
     const statItems = [
-        { label: 'Employees', value: stats?.totalEmployees, suffix: '+' },
+        { label: 'Employees', value: stats?.totalEmployees, suffix: '' },
         { label: 'Departments', value: stats?.totalDepartments, suffix: '' },
         { label: 'Active Projects', value: stats?.totalProjects, suffix: '' },
     ];

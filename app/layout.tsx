@@ -5,11 +5,13 @@ import QueryProvider from "@/components/providers/QueryProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
+import companyData from '@/company.json';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CorpData - Enterprise Insights",
-  description: "Transparency and data accessibility for the modern enterprise.",
+  title: companyData.metadata.title,
+  description: companyData.metadata.description,
 };
 
 export default function RootLayout({
