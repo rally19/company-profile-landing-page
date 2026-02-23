@@ -127,3 +127,7 @@ Simply modify this file to update the text content across the site.
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## 🔴 Live Testing
+
+Test the project live on https://company-profile-landing-page-tawny.vercel.app/
