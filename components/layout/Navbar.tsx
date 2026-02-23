@@ -61,7 +61,7 @@ export function Navbar() {
                     {/* Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
                         {/* Placeholder for Dashboard Login if needed, or just a generic CTA */}
-                        <Link href="https://wicked-katleen-companyuhuy-cda70a58.koyeb.app/" className="px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/5">
+                        <Link href="https://striking-leisha-leonelrs18-8e5b0721.koyeb.app/" className="px-4 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/5">
                             Login
                         </Link>
                     </div>
@@ -103,7 +103,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <Link
-                            href="https://wicked-katleen-companyuhuy-cda70a58.koyeb.app/"
+                            href="https://striking-leisha-leonelrs18-8e5b0721.koyeb.app/"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="block px-3 py-2 mt-4 text-center rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700"
                         >

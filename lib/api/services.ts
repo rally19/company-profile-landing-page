@@ -1,6 +1,6 @@
 import { CompanyStats, Department, Employee, Project } from './types';
 
-const API_BASE_URL = 'https://wicked-katleen-companyuhuy-cda70a58.koyeb.app/api';
+const API_BASE_URL = 'https://striking-leisha-leonelrs18-8e5b0721.koyeb.app/api';
 
 export const getCompanyStats = async (): Promise<CompanyStats> => {
     const res = await fetch(`${API_BASE_URL}/dashboard/stats`);
