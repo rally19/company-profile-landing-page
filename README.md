@@ -2,7 +2,7 @@
 
 A modern, high-performance company profile landing page built with Next.js 16, React 19, and Tailwind CSS 4. This project is designed to be easily customizable, with content driven by a central JSON configuration file.
 
-## ✨ Features
+## ✨ Features 
 
 - **⚡️ Modern Tech Stack**: Built with the latest Next.js 16 (App Router) and React 19.
 - **🎨 Tailwind CSS 4**: Utilizing the newest version of Tailwind for efficient styling.
